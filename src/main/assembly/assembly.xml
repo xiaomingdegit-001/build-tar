@@ -1,0 +1,26 @@
+<assembly>
+	<id>1.0.001</id>
+  	<formats>
+    	<format>tar.gz</format>
+  	</formats>
+  	<fileSets>
+	    <fileSet>
+			<directory>src/main/resources</directory>
+			<includes>
+				<include>*.yml</include>
+			</includes>
+			<outputDirectory>conf</outputDirectory>
+			<fileMode>0644</fileMode>
+		</fileSet>
+	    <fileSet>
+			<directory>src/main/resources/bin</directory>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+		</fileSet>
+  	</fileSets>
+  	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+</assembly> 

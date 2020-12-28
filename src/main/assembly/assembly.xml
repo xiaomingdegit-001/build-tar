@@ -4,11 +4,8 @@
     	<format>tar.gz</format>
   	</formats>
   	<fileSets>
-	    <fileSet>
-			<directory>src/main/resources</directory>
-			<includes>
-				<include>*.yml</include>
-			</includes>
+		<fileSet>
+			<directory>${project.build.directory}/${artifactId}/conf</directory>
 			<outputDirectory>conf</outputDirectory>
 			<fileMode>0644</fileMode>
 		</fileSet>

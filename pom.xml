@@ -27,6 +27,29 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>compiler-dev</id>
+            <properties>
+                <spring.application.proflies>dev</spring.application.proflies>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>compiler-test</id>
+            <properties>
+                <spring.application.proflies>test</spring.application.proflies>
+            </properties>
+        </profile>
+        <profile>
+            <id>compiler-prod</id>
+            <properties>
+                <spring.application.proflies>prod</spring.application.proflies>
+            </properties>
+        </profile>
+    </profiles>
 
     <build>
         <finalName>xm-test</finalName>
@@ -59,9 +82,9 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <!--<compilerArguments>-->
-                        <!--<bootclasspath>${java.home}/lib/rt.jar</bootclasspath>-->
-                    <!--</compilerArguments>-->
+                    <compilerArguments>
+                        <bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
+                    </compilerArguments>
                 </configuration>
             </plugin>
             <plugin>

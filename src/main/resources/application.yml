@@ -1,1 +1,5 @@
-spring.profiles.active: @spring.application.proflies@
+spring:
+  application:
+    name: @artifactId@
+  profiles:
+    active: @spring.application.proflies@

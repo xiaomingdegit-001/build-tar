@@ -100,7 +100,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <excludes>
-                        <!--<exclude>com/test/*/mapper/**</exclude>-->
+                        <exclude>com/test/mapper/**</exclude>
                         <exclude>*.yml</exclude>
                         <exclude>*.txt</exclude>
                         <exclude>*.xml</exclude>
